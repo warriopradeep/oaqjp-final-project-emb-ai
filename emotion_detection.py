@@ -10,4 +10,6 @@ def emotion_detector(text_to_analyze):
     if response_from_api.status_code == 500:
         return {'label': None, 'score': None}
 
-    return response_from_api.text
+    formatted_response = json.loads(response_from_api.text)
+    formatted_response = formatted_response['emotionPredictions'][0]['emotion']
+    return formatted_response
