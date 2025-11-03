@@ -5,11 +5,11 @@ class TestEmotionDetector(unittest.TestCase):
 
     def test_emotion_joy(self):
         dominant_emo = emotion_detector("I am glad this happened")['dominant_emotion']
-        self.assertEqual('	joy', dominant_emo)
+        self.assertEqual('joy', dominant_emo)
 
     def test_emotion_anger(self):
         dominant_emo = emotion_detector("I am really mad about this")['dominant_emotion']
-        self.assertEqual('	anger', dominant_emo)
+        self.assertEqual('anger', dominant_emo)
 
     def test_emotion_disgust(self):
         dominant_emo = emotion_detector("I feel disgusted just hearing about this")['dominant_emotion']
